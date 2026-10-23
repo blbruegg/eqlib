@@ -1147,51 +1147,52 @@ public:
 /*0x020*/ ArrayClass<CXWnd*>           ParentAndContextMenuWindows;
 /*0x038*/ ArrayClass<CXWnd*>           TransitionWindows;
 /*0x050*/ ArrayClass<CXWnd*>           PendingDeletionWindows;
-/*0x068*/ uint32_t                     TypematicKey;
-/*0x06c*/ uint32_t                     LastKeyDownTime;
-/*0x070*/ uint32_t                     LastMouseClickTime;           // when mouse was last clicked
-/*0x074*/ uint32_t                     MouseMoveTimeStamp;           // when mouse was last moved
-/*0x078*/ int                          StrokesSent;
-/*0x07c*/ int                          ToolTipHitTest;               // this is really an enum //0 outside 1 transparent 2 client 3 minimizebox 4 tilebox 5 qmark 6 maxbox 7 closebox 8 titlebar 9 vscrollup 10 vscrolldown 11 vscroll thumb 12 vscroll pgup 13 vscroll pgdn 14 hscroll left 15 hscroll right 16 hscroll thumb 17 hscroll pgup 18 hscroll pgdn 19 border left 20 border top 21 border right 22 border bottom 23 border topleft 24 border topright 25 border bott left 26 bott right 27 left top 28 left bott 29 right top 30 right bott 31 no hit
-/*0x080*/ CXWnd*                       LastClickedWindow;
-/*0x088*/ CXWnd*                       MainWindow;
-/*0x090*/ CXWnd*                       FocusWindow;                  // when you select a window its pointer shows up here
-/*0x098*/ CXWnd*                       CurrDraggedWindow;            // when you drag a window its pointer shows up here
-/*0x0a0*/ CXWnd*                       ActiveWindow;
-/*0x0a8*/ CXWnd*                       LastMouseOver;                // Current window pointer is over if this is 0 we are above MAIN Window
-/*0x0b0*/ CXWnd*                       Tooltip;                      // Last Tooltip to show?
-/*0x0b8*/ ArrayClass<CXWnd*>           GlobalFocusWindows;
-/*0x0d0*/ bool                         bReadingLog;
-/*0x0d1*/ bool                         bSidlManagerOwner;
-/*0x0d4*/ int                          CaptureCount;
-/*0x0d8*/ bool                         bMouseMoveRelative;
-/*0x0dc*/ CXPoint                      MousePoint;
-/*0x0e4*/ bool                         bCapsLock;
-/*0x0e5*/ bool                         KeyboardFlags[4];
-/*0x0e9*/ bool                         bChatMessage;
-/*0x0ea*/ bool                         bDrawWindows;
-/*0x0eb*/ uint8_t                      MouseMoveFlags;
-/*0x0ec*/ EWndManagerMode              ManagerMode;
-/*0x0f0*/ int                          DecorButtonHitTest;
-/*0x0f4*/ CXPoint                      MoveResize;
-/*0x100*/ SDragDropInfo                DragDropInfo;
-/*0x138*/ CClickStickInfo              ClickStickInfo;
-/*0x170*/ int                          Unknown0x100;
-/*0x174*/ bool                         bModal;
-/*0x178*/ uint32_t                     TTCheckTimer;
-/*0x17c*/ int                          Flags;
-/*0x180*/ CXStr                        ClipText;
-/*0x188*/ uint32_t                     ScreenExtentX;
-/*0x18c*/ uint32_t                     ScreenExtentY;
-/*0x190*/ ArrayClass<CTextureFont*>    FontsArray;
-/*0x1a8*/ CTextureFont*                pSystemFont;
-/*0x1b0*/ bool                         bToggleWindowMode;
-/*0x1b8*/ HWND*                        pGlobalHwnd;
-/*0x1c0*/ CXPoint                      StoredMousePos;               // last position Mouse was at before we moved it
-/*0x1c8*/ bool                         bManagerDeletionPending;
-/*0x1d0*/ CursorClass                  CC;
-/*0x248*/ bool                         bUseNewUIEngine;
-/*0x24c*/
+/*0x068*/ uint32_t                     Unknown0x68;                  // new in 2026-10-21, found by ctor store
+/*0x06c*/ uint32_t                     TypematicKey;
+/*0x070*/ uint32_t                     LastKeyDownTime;
+/*0x074*/ uint32_t                     LastMouseClickTime;           // when mouse was last clicked
+/*0x078*/ uint32_t                     MouseMoveTimeStamp;           // when mouse was last moved
+/*0x07c*/ int                          StrokesSent;
+/*0x080*/ int                          ToolTipHitTest;               // this is really an enum //0 outside 1 transparent 2 client 3 minimizebox 4 tilebox 5 qmark 6 maxbox 7 closebox 8 titlebar 9 vscrollup 10 vscrolldown 11 vscroll thumb 12 vscroll pgup 13 vscroll pgdn 14 hscroll left 15 hscroll right 16 hscroll thumb 17 hscroll pgup 18 hscroll pgdn 19 border left 20 border top 21 border right 22 border bottom 23 border topleft 24 border topright 25 border bott left 26 bott right 27 left top 28 left bott 29 right top 30 right bott 31 no hit
+/*0x088*/ CXWnd*                       LastClickedWindow;
+/*0x090*/ CXWnd*                       MainWindow;
+/*0x098*/ CXWnd*                       FocusWindow;                  // when you select a window its pointer shows up here
+/*0x0a0*/ CXWnd*                       CurrDraggedWindow;            // when you drag a window its pointer shows up here
+/*0x0a8*/ CXWnd*                       ActiveWindow;
+/*0x0b0*/ CXWnd*                       LastMouseOver;                // Current window pointer is over if this is 0 we are above MAIN Window
+/*0x0b8*/ CXWnd*                       Tooltip;                      // Last Tooltip to show?
+/*0x0c0*/ ArrayClass<CXWnd*>           GlobalFocusWindows;
+/*0x0d8*/ bool                         bReadingLog;
+/*0x0d9*/ bool                         bSidlManagerOwner;
+/*0x0dc*/ int                          CaptureCount;
+/*0x0e0*/ bool                         bMouseMoveRelative;
+/*0x0e4*/ CXPoint                      MousePoint;
+/*0x0ec*/ bool                         bCapsLock;
+/*0x0ed*/ bool                         KeyboardFlags[4];
+/*0x0f1*/ bool                         bChatMessage;
+/*0x0f2*/ bool                         bDrawWindows;
+/*0x0f3*/ uint8_t                      MouseMoveFlags;
+/*0x0f4*/ EWndManagerMode              ManagerMode;
+/*0x0f8*/ int                          DecorButtonHitTest;
+/*0x0fc*/ CXPoint                      MoveResize;
+/*0x108*/ SDragDropInfo                DragDropInfo;
+/*0x140*/ CClickStickInfo              ClickStickInfo;
+/*0x178*/ int                          Unknown0x100;
+/*0x17c*/ bool                         bModal;
+/*0x180*/ uint32_t                     TTCheckTimer;
+/*0x184*/ int                          Flags;
+/*0x188*/ CXStr                        ClipText;
+/*0x190*/ uint32_t                     ScreenExtentX;
+/*0x194*/ uint32_t                     ScreenExtentY;
+/*0x198*/ ArrayClass<CTextureFont*>    FontsArray;
+/*0x1b0*/ CTextureFont*                pSystemFont;
+/*0x1b8*/ bool                         bToggleWindowMode;
+/*0x1c0*/ HWND*                        pGlobalHwnd;
+/*0x1c8*/ CXPoint                      StoredMousePos;               // last position Mouse was at before we moved it
+/*0x1d0*/ bool                         bManagerDeletionPending;
+/*0x1d8*/ CursorClass                  CC;
+/*0x250*/ bool                         bUseNewUIEngine;
+/*0x254*/
 
 	inline bool IsShiftKey() const { return KeyboardFlags[0]; }
 	inline bool IsCtrlKey() const { return KeyboardFlags[1]; }
