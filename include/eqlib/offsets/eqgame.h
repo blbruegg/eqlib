@@ -23,7 +23,7 @@
 #define __ExpectedVersionTime                                     "13:46:43"
 #define __ActualVersionDate_x                                      0x1409A0DD0
 #define __ActualVersionTime_x                                      0x1409A0DC0
-#define __ActualVersionBuild_x                                     0x1408658B0
+#define __ActualVersionBuild_x                                     0x140935DA0
 
 // Memory Protection
 #define __MemChecker0_x                                            0x1402D5640
@@ -59,7 +59,7 @@
 #define DI8__Keyboard_x                                            0x140F442E0
 #define __LoginName_x                                              0x140F46F2C
 #define __CurrentMapLabel_x                                        0x140F5AA40
-#define __LabelCache_x                                             0x140F4C5A0 // TODO(unresolved)
+#define __LabelCache_x                                             0x140F5B610
 #define __ChatFilterDefs_x                                         0x140A7B1C0
 #define Teleport_Table_Size_x                                      0x140EC30A8
 #define Teleport_Table_x                                           0x140EC35A0
@@ -168,7 +168,7 @@
 #define __eq_new_x                                                 0x1406F0400
 #define __CopyLayout_x                                             0x1402D1A10
 #define __ThrottleFrameRate_x                                      0x140286265
-#define __ThrottleFrameRateEnd_x                                   0x14028626B // ThrottleFrameRate+6
+#define __ThrottleFrameRateEnd_x                                   0x14028626B
 
 ////
 // Section 4: Function Offsets
@@ -205,7 +205,7 @@
 #define CharacterZoneClient__Cur_Mana_x                            0x1400F3010
 #define CharacterZoneClient__FindAffectSlot_x                      0x1400E0960
 #define CharacterZoneClient__GetAdjustedSkill_x                    0x1400F9760
-#define CharacterZoneClient__GetBaseSkill_x                        0x140108A50 // bracketed by paired neighbors
+#define CharacterZoneClient__GetBaseSkill_x                        0x140108A50  // CharacterZoneClient::Skill (inlineable)
 #define CharacterZoneClient__GetCastingTimeModifier_x              0x1400E1E00
 #define CharacterZoneClient__GetCurrentMod_x                       0x1400F0900
 #define CharacterZoneClient__GetCursorItemCount_x                  0x1400FAFF0
@@ -482,9 +482,9 @@
 #define MapViewMap__HandleLButtonDown_x                            0x140479360
 
 // CMerchantWnd
-#define CMerchantWnd__DisplayBuyOrSellPrice_x                      0x14049F3E0 // body match 0.94
-#define CMerchantWnd__PurchasePageHandler__RequestGetItem_x        0x1404A7700 // body match 1.0
-#define CMerchantWnd__PurchasePageHandler__RequestPutItem_x        0x1404A7F10 // UNVERIFIED body match 0.65
+#define CMerchantWnd__DisplayBuyOrSellPrice_x                      0x14049F3E0  // CMerchantWnd__PurchasePageHandler__DisplayBuyOrSellPrice
+#define CMerchantWnd__PurchasePageHandler__RequestGetItem_x        0x1404A7700
+#define CMerchantWnd__PurchasePageHandler__RequestPutItem_x        0x1404A7F10
 #define CMerchantWnd__MerchantPageHandler__SelectBuySellSlot_x     0x1404ADCA0
 #define CMerchantWnd__SelectBuySellSlot_x                          0x1404AC3A0
 #define CMerchantWnd__PurchasePageHandler__UpdateList_x            0x1404B25E0
@@ -855,7 +855,7 @@
 #define COptionsWnd__FillChatFilterList_x                          0x1404C1880
 
 // CResolutionHandler
-#define CResolutionHandler__GetWindowedStyle_x                     0x140343480 // bracketed by paired neighbors
+#define CResolutionHandler__GetWindowedStyle_x                     0x140343480
 #define CResolutionHandler__UpdateResolution_x                     0x1405C1EA0
 
 // CColorPickerWnd
@@ -886,7 +886,7 @@
 // FactionManagerClient
 #define FactionManagerClient__Instance_x                           0x14012FAB0
 #define FactionManagerClient__HandleFactionMessage_x               0x14012FE90
-#define FactionManagerClient__GetFactionStanding_x                 0x14012F280
+#define FactionManagerClient__GetFactionStanding_x                 0x14012F1B0
 #define FactionManagerClient__GetMaxFaction_x                      0x14012F280
 #define FactionManagerClient__GetMinFaction_x                      0x14012F130
 

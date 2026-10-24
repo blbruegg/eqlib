@@ -50,7 +50,7 @@ enum EPlace
 	CanPlaceAndGoto,
 };
 
-constexpr size_t zoneHeader_size = 0x2A8; // @sizeof(zoneHeader) :: 2026-09-17 (live) @ 0x140EBBCE4
+constexpr size_t zoneHeader_size = 0x2A8; // @sizeof(zoneHeader) :: 2026-10-19 (live) @ 0x140ECAD24
 
 struct [[offsetcomments]] zoneHeader
 {
@@ -315,7 +315,7 @@ struct [[offsetcomments]] EQGameOptions
 
 
 // size of EverQuestinfo is the distance from this byte to the end of the struct
-constexpr size_t EverQuestinfo_size = 0x75290; // @sizeof(EverQuestinfo) :: 2026-10-21 (live), recovered by tools/mq_agent/mq_globalmap.py @ 0x140ECAB30
+constexpr size_t EverQuestinfo_size = 0x75298; // @sizeof(EverQuestinfo) :: 2026-10-19 (live) @ 0x140ECAB30
 
 struct [[offsetcomments]] EverQuestinfo
 {
@@ -604,13 +604,15 @@ struct [[offsetcomments]] EverQuestinfo
 /*0x75274*/ float             TributeMod4;
 /*0x75278*/ bool              bUseNewUIEngine;
 /*0x75279*/ bool              bSaveDefaultMapWarningDisplayed; // Flag to show warning only once.
-/*0x7527a*/ bool              bAutoAttack;
-/*0x7527b*/ bool              bAutoRangeAttack;
-/*0x7527c*/ int               ItemPending;
-/*0x75280*/ int               RequestPending;
-/*0x75284*/ uint32_t          ItemPendingTime;
-/*0x75288*/ uint32_t          RequestPendingTime;
-/*0x7528c*/
+/*0x7527c*/ int               MultiItemSelectKey;
+/*0x75280*/ bool              bSendMultiItemWarning;
+/*0x75281*/ bool              bAutoAttack;
+/*0x75282*/ bool              bAutoRangeAttack;
+/*0x75284*/ int               ItemPending;
+/*0x75288*/ int               RequestPending;
+/*0x7528c*/ uint32_t          ItemPendingTime;
+/*0x75290*/ uint32_t          RequestPendingTime;
+/*0x75294*/
 };
 
 SIZE_CHECK(EverQuestinfo, EverQuestinfo_size);
@@ -717,7 +719,7 @@ public:
 };
 
 
-constexpr size_t CEverQuest_size = 0X19710; // @sizeof(CEverQuest) :: 2026-10-21 (live) @ 0x14035a2e3
+constexpr size_t CEverQuest_size = 0x19710; // @sizeof(CEverQuest) :: 2026-10-19 (live) @ 0x14035A2E3
 
 class [[offsetcomments]] CEverQuest : public CEverQuestBase, public UniversalChatProxyHandler, public PopDialogHandler
 {
